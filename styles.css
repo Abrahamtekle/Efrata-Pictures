@@ -193,7 +193,9 @@ section { padding: 130px 0; }
 .service-visual.in-view { opacity: 1; transform: scale(1); }
 .service-visual .visual-img {
   position: absolute; inset: 0;
-  background-size: cover; background-position: center;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
   transition: transform 0.7s ease;
 }
 .service-visual:hover .visual-img { transform: scale(1.1); }
