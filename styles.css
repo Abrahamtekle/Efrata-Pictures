@@ -194,7 +194,7 @@ section { padding: 130px 0; }
 .service-visual .visual-img {
   position: absolute; inset: 0;
   background-size: cover; 
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   transition: transform 0.7s ease;
 }
