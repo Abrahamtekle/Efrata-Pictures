@@ -163,7 +163,7 @@ section { padding: 130px 0; }
 
 /* ---------- Services (numbered) ---------- */
 .service-row {
-  display: grid; grid-template-columns: 90px 1fr 1fr; gap: 50px; align-items: center;
+  display: grid; grid-template-columns: 60px 1fr 1.4fr; gap: 50px; align-items: center;
   padding: 60px 0; border-top: 1px solid var(--line);
 }
 .service-row > * { min-width: 0; }
