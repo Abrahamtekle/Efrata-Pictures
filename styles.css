@@ -163,7 +163,7 @@ section { padding: 130px 0; }
 
 /* ---------- Services (numbered) ---------- */
 .service-row {
-  display: grid; grid-template-columns: 60px 1fr 1.4fr; gap: 50px; align-items: center;
+  display: grid; grid-template-columns: 90px 1fr 1fr; gap: 50px; align-items: center;
   padding: 60px 0; border-top: 1px solid var(--line);
 }
 .service-row > * { min-width: 0; }
@@ -182,7 +182,8 @@ section { padding: 130px 0; }
 .service-visual {
   width: 100%;
   min-width: 0;
-  aspect-ratio: 16/10;
+  aspect-ratio: 4/5;
+  max-width: 420px;
   border: 1px solid var(--line);
   position: relative;
   overflow: hidden;
@@ -191,26 +192,25 @@ section { padding: 130px 0; }
   transition: opacity 0.9s ease, transform 0.9s ease;
 }
 .service-visual.in-view { opacity: 1; transform: scale(1); }
-.service-visual .visual-img {
+.service-visual img {
   position: absolute; inset: 0;
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
   transition: transform 0.7s ease;
+  display: block;
 }
-.service-visual:hover .visual-img { transform: scale(1.1); }
-/* Baptism image - position to show the head */
-.service-row:nth-child(4) .visual-img {
-  background-size: cover;
-  background-position: center top;
-}
+.service-visual:hover img { transform: scale(1.1); }
 @media (prefers-reduced-motion: reduce) {
   .service-visual { opacity: 1; transform: none; transition: none; }
-  .service-visual .visual-img { transition: none; }
-  .service-visual:hover .visual-img { transform: none; }
+  .service-visual img { transition: none; }
+  .service-visual:hover img { transform: none; }
 }
-.service-row:nth-child(even) .service-visual { order: -1; }
-@media (max-width: 860px) { .service-row:nth-child(even) .service-visual { order: 0; } }
+.service-row:nth-child(even) .service-visual { order: -1; margin-left: auto; }
+.service-row:nth-child(odd) .service-visual { margin-right: auto; }
+@media (max-width: 860px) {
+  .service-row:nth-child(even) .service-visual { order: 0; margin-left: 0; }
+  .service-visual { max-width: 380px; margin: 0 auto; }
+}
 
 /* ---------- Gallery ---------- */
 .gallery-grid {
